@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DensityFlight.exe" version="1.0.0.10" publicKeyToken="52463370e5517e19" language="en-GB" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="hnet.com-image.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DensityFlight" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DensityFlight.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DensityFlight.exe" size="270272">
+      <assemblyIdentity name="DensityFlight" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Uem6Zji6IxoMER0zEx8M32rqGWGMFp+UexKh+R4izgk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Extreme.Numerics.dll" size="4045312">
+      <assemblyIdentity name="Extreme.Numerics" version="7.0.16.0" publicKeyToken="9E513770F58567B2" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Tm0WXwt/Sv4zWOKi0fIsd6jLi1f++KK/ae+ogjoCwGw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="DensityFlight.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="hnet.com-image.ico" size="105246">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>I+EnjwKAhojEzP7ZFaeVDTtLgaOxpwR145j60yOd3LQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=RAE-LAPTOP\Rache" issuerKeyHash="0c8c532e83d67eacbec68046d9d740929f2adf27" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ylLJcOQ5vwwoWKIL845OrV3pPYrmnJb/xGToYLZvlb0=</DigestValue></Reference></SignedInfo><SignatureValue>giB3tkTJgZjXtpK3BUlvILaxU116CoqH1UvdBO5QJEqD1mkgDj2NNCKeDZ9VL+rVa7rN6R+U8YbdJZUrD5pbuyqGqKuoYl/uedfI1TxDTyTXQp5d8whYspSCxNx1tjTEw8MotbxwLsF4MowimZLkijYi6ViiJvh4saajuEOVRco=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>p2N1kc1kUs0GNHtxKEByDu6rmPHUw8q7/jsj0E/hqDeSMLXf8eBP3C0Qn4fesPGvFpfruBF1IDeOQIzvy4W5cNXa5O359W2T7z4NoHrqeWDnoz4CciZ1FJidR3bYJ1SBx2VHpqb+DvDRDa65TJUKHlGmbkyWAKiKLLCqv9kgXjk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="bd956fb660e864c4ff969ce68a3de95dad4e8ef30ba258280cbf39e470c952ca" Description="" Url=""><as:assemblyIdentity name="DensityFlight.exe" version="1.0.0.10" publicKeyToken="52463370e5517e19" language="en-GB" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=RAE-LAPTOP\Rache</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KCvhmVx036+Kt5mu+9EsvfeGmVZyF3vC9qENLJRWHp0=</DigestValue></Reference></SignedInfo><SignatureValue>oC9MpNXq9RMn36KtNmPGxSo4VCayycWu8pKAAHN1q7KfTWUteeQdPYjpw/TS8wX+TzalC3Pzz9g5I8s4BU2VrFFS3SWbEuRYKTp0Hh+zTlNqdvxtsEIuBIkKQIcxM9Tt5mepEvS6CXMQJZPln3+RUq1E7mU49PN9ClaA3/KMGt0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>p2N1kc1kUs0GNHtxKEByDu6rmPHUw8q7/jsj0E/hqDeSMLXf8eBP3C0Qn4fesPGvFpfruBF1IDeOQIzvy4W5cNXa5O359W2T7z4NoHrqeWDnoz4CciZ1FJidR3bYJ1SBx2VHpqb+DvDRDa65TJUKHlGmbkyWAKiKLLCqv9kgXjk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQUHF6Gux8SYNLI9AN4uY7KjANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAAUgBBAEUALQBMAEEAUABUAE8AUABcAFIAYQBjAGgAZTAeFw0yMDExMjEwOTI2MTJaFw0yMTExMjExNTI2MTJaMCsxKTAnBgNVBAMeIABSAEEARQAtAEwAQQBQAFQATwBQAFwAUgBhAGMAaABlMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnY3WRzWRSzQY0e3EoQHIO7quY8dTDyrv+OyPQT+GoN5Iwtd/x4E/cLRCfh96w8a8Wl+u4EXUgN45AjO/Lhblw1drk7fn1bZPvPg2geup5YOejPgJyJnUUmJ1HdtgnVIHHZUempv4O8NENrrlMlQoeUaZuTJYAqIossKq/2SBeOQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBACtfqoZFnnzFgzZmNChb1Ye6qiupYQG0eWVTms4XBcLuv7de6G09//doH9qnu3OzNljqKf947Vxo0gKRP5I9tJIbFWnNZQu7rpn/54Vv0i2GTR1GElx5iOBQ8ux8F0h5Gar983h+oZws4JTb9lcoZX73SIiYwSYGfeSO6JogbMgv</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
