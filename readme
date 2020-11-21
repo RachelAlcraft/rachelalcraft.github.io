@@ -1,0 +1,4 @@
+This is my developer website including releases of Density Flight.
+
+The problem with releasing onto github was solved with this resource:
+https://www.craftware.dev/2017/01/09/clickonce-and-git-different-computed-hash-than-specified-in-manifest/
