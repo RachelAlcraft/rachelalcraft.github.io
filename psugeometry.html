@@ -56,14 +56,15 @@ td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
 
 <hr/>
 <h3>Library Description</h3>
-<p>The PsuGeometry library is designed to make producing geoemtric and data reports of protein structures simple, powerful and beautiful.</p>
-<p>The protein structures and the electron density are loaded from the Protein Databank in Europe (Velankar et al, 2009).<br/> Manual or edited pdbs can be used too by having the files in the same directory as the pdb/electron density files.</p>
-<p>7 plot types have been designed based on matplotlib and seaborn, allowing you to simply decide which geoemtric measures to correlate, what colour, and for what.
-You can define any geeomtric measures you like based on the standard atom naming of protein structures, these will be either distances (eg N:CA), angles (eg N:CA:C) or dihedrals (eg N:CA:C:N+1).
-You are not limitted to standard geeomtric measures: you can correlate N:C-3 against CA:CB+1 if you so wish. (distance between N of the reference residue and C 3 residues back against distance between CA of the refernce residue and 1 CB forwards).</p>
+<p>The PsuGeometry library is designed to make producing geoemetric and data reports of protein structures simple, powerful and beautiful.</p>
+<p>Protein structures and electron density matrices are downloaded from the Protein Databank in Europe (Velankar et al, 2009).<br/> Alternatively manual or edited pdbs can be used by having the files in the same directory as the pdb/electron density files.</p>
+<p>7 plot types have been designed based on matplotlib and seaborn, allowing you to simply decide: which geometric measures to correlate; what colour; and for what.
+You can define any geeomtric measures you like based on the standard atom naming of protein structures: these will be either distances (eg N:CA), angles (eg N:CA:C) or dihedrals (eg N:CA:C:N+1).
+You are not limited to standard geeomtric measures: you can correlate N:C-3 against CA:CB+1 if you so wish 
+(distance between N of the reference residue and C 3 residues back against distance between CA of the reference residue and 1 CB forwards).</p>
 <p>The library includes the ability to view a wide variety of hues for thse measures, from other geoemtric measures for an extra dimension, to bfactors, amino acid, and most uniquely, electron density.</p>
-<p>There is also the ability to look directly at the electron density (e.g. x,y,z or c,r,s coordinates against bfactor or 2FoFc) and to explore data in the pdb structures.<br/>
-For example, you can correlate the electron density of the atoms against the number fo electrons in the atoms, or the bfactor aginast the secondary structure</p>
+<p>There is also the ability to look directly at the electron density (e.g. x,y,z or c,r,s coordinates against bfactor or 2FoFc) and to explore data in the pdb structures.
+For example, you can correlate the electron density of the atoms against the number of electrons in the atoms, or the bfactor aginast the secondary structure</p>
 <hr/>
 <h3>Each Plot Type</h3>
 <button type="button" class="collapsible">Available plots</button>
@@ -121,7 +122,7 @@ The library relies on these Bioinformatics librararies:
   <p>The code can be found on <a href="https://github.com/RachelAlcraft/PsuGeometry">GitHub</a></p> 
 </div>
 <hr/>
-<p>Running Reports</p>
+<h3>Running Reports</h3>
 <p>The code for running reports is given for the Level 1 reports and provided in the link for Levels 2 and 3. All the code is preceeded with these 4 lines:</p>
 <pre><code>
 from PsuGeometry import GeoReport as psu
@@ -200,7 +201,7 @@ georep.printReport('RachelsChoice', 'rachel')
   </p>
 </div>
 <hr/>
-<p>Examples</p>
+<h3>Examples</h3>
 
 <button type="button" class="collapsible">Sample reports</button>
 <div class="content">
@@ -218,7 +219,7 @@ georep.printReport('RachelsChoice', 'rachel')
   </p>
 </div>
 <hr/>
-<p>Code documentation</p>
+<h3>Code documentation</h3>
 <button type="button" class="collapsible">Class library</button>
 <div class="content">
   <p>
