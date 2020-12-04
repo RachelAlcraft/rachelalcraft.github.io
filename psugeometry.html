@@ -3,7 +3,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {text-align:left;background-color:LightSteelBlue ;} 
+body {text-align:left;
+	background-color:LightSteelBlue;
+	padding: 9px;
+	} 
+pre {text-align:left;
+		background-color:AliceBlue;
+		padding: 9px;
+		color:Navy} 
 img {width:98% }
 table {width:98%;table-layout:fixed;display:table;margin:0 auto;background-color:Snow ;} 
 td {border:1px solid Snow;background-color:White;}
@@ -62,28 +69,38 @@ The library relies on these Bioinformatics librararies:
 </div>
 <hr/>
 <p>Running Reports</p>
+<p>The code for running reports is given for the Level 1 reports and provided in the link for Levels 2 and 3. All the code is preceeded with these 4 lines:</p>
+<pre><code>
+from PsuGeometry import GeoReport as psu
+pdbDataPath = 'ProteinDataFiles/pdb_data/'  #This is whaetever directory you keep you pdb files in (ent format) - will download if missing
+edDataPath = 'ProteinDataFiles/ccp4_data/'  #This is whatever directory you keep your electron density files in (ccp4 format) - will download if missing
+printPath = 'ProteinDataFiles/results_psu/' #This is where you want the html report to be written
+</code></pre>
 <button type="button" class="collapsible">Level 1 (easy)</button>
 <div class="content">
   <p>
-  <table>
-  <tr>
-	<th>Report Description</th>
-  <th>Report Code</th>
-  <th>Report Example</th>
-  </tr>
-  <tr>
-  <td>A simple correlation report</td>
-  <td><a href="https://github.com/RachelAlcraft/PsuGeometry/blob/master/PsuGeometry/tests/test_Level1_SimpleCorrelations.py">Code</a></td>
-  <td><a href="PsuGeometry/examples/PSU-SimpleCorr-GEO.html">Example</a></td>
-  </tr>
-    <tr>
-  <td>A predefined report</td>
-  <td><a href="https://github.com/RachelAlcraft/PsuGeometry/blob/master/PsuGeometry/tests/test_Level1_predefinedReport.py">Code</a></td>
-  <td><a href="PsuGeometry/examples/PSU-1tt8_rae-GEO.html">Example</a></td>
-  </tr>
-  </table>  
-</ul>
-  </p>
+  <ul>
+  <li>
+  <p>A simple correlation report, with <a href="PsuGeometry/examples/PSU-SimpleCorr-GEO.html">example</a><p>
+  <pre><code>
+  pdbList = ['1i1w']
+  georep = psu.GeoReport(pdbList,pdbDataPath,edDataPath,printPath,ed=True,dssp=True)
+  georep.addScatter(geoX='PHI',geoY='PSI',title='Ramachandran Plot')
+  georep.addScatter(geoX='N:O',geoY='CB:O',title='NO-CBO')
+  georep.addScatter(geoX='PSI',geoY='N:O',title='PSI-NO')
+  georep.addScatter(geoX='PSI',geoY='CB:O',title='PSI-CBO')
+  georep.printToHtml('Simple Correlations',2,'SimpleCorr')
+</code></pre>
+  </li>
+  <li>
+  <p>A predefined report, with <a href="PsuGeometry/examples/PSU-1tt8_rae-GEO.html">example</a><p>
+  <pre><code>
+pdbList = ['1us0','1ejg','2cnq']
+georep = psu.GeoReport(pdbList,pdbDataPath,edDataPath,printPath)
+georep.printReport('RachelsChoice', 'rachel')
+</code></pre>
+  </li>
+  </ul>
 </div>
 <button type="button" class="collapsible">Level 2 (advanced)</button>
 <div class="content">
@@ -122,7 +139,7 @@ The library relies on these Bioinformatics librararies:
   <th>Report Example</th>
   </tr>
   <tr>
-  <td>Serialising to file and back for memry - 1000 structures</td>
+  <td>Serialising to file and back for memory - 1000 structures</td>
   <td><a href="https://github.com/RachelAlcraft/PsuGeometry/blob/master/PsuGeometry/tests/test_Level3_1000.py">Code</a></td>
   <td><a href="PsuGeometry/examples/PSU-1000-GEO.html">Example</a></td>
   </tr>  
