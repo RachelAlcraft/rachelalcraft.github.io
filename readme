@@ -2,6 +2,9 @@ This is my developer website including releases of Density Flight.
 
 Google anaytics: https://analytics.google.com/analytics/web/?authuser=0#/a42992514p258353672/admin/streams/table/
 
+Google anaytics: https://analytics.google.com/analytics/web/?authuser=0#/p258353672/reports/dashboard?params=_u..nav%3Ddefault&r=lifecycle-engagement-overview
+
+
 
 The problem with releasing onto github was solved with this resource:
 https://www.craftware.dev/2017/01/09/clickonce-and-git-different-computed-hash-than-specified-in-manifest/
