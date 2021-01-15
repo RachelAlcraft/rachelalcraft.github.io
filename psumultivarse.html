@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><link rel="icon" href="Images/atom.png"><title>Rachel Alcraft PsuMultivarse</title>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {text-align:left;
+	background-color:LightSteelBlue;
+	padding: 9px;
+	} 
+pre {text-align:left;
+		background-color:AliceBlue;
+		padding: 9px;
+		color:Navy} 
+	img {width:98% }
+	table {width:98%;
+	table-layout:fixed;	
+	margin:0 auto;
+	background-color:Snow;	
+	display: table;} 
+td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
+.collapsible {
+  background-color: cornflowerblue;
+  color: AliceBlue;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: DeepSkyBlue;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HBH4HKT0NM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HBH4HKT0NM');
+</script>
+</head>
+<body>
+
+<body><h1>--- Rachel Alcraft, Bioinformatics ---</h1>
+<p style="background-color:tomato;">
+   <a href='index.html' title='Home' target='_self'>Home</a>
+~ <a href='citing.html' title='Citing' target='_self'>Citing</a>
+~ <a href='psubirkbeck.html' title='PsuBirkbeck' target='_self'>PsuBirkbeck</a>
+~ <a href='psugeometry.html' title='PsuGeometry' target='_self'>PsuGeometry</a>
+~ <a href='psudensity.html' title='PsuDensity' target='_self'>PsuDensity</a>
+~ <a href='densityflight.html' title='DensityFlight' target='_self'>DensityFlight</a>
+~ <a href='psumultivarse.html' title='PsuMultivarse' target='_self'>PsuMultivarse</a>
+</p>
+
+<hr/>
+<h1>Psu Multivarse</h1>
+<h3>A multivariate interpolation library</h3>
+<hr/>
+<h3>Library Description</h3>
+<p>This library provides a simple interface to multivariate interpolation for values and partial derivatives. Two methods are employed: 
+<ul>
+<li>Multivariate fitting which has a bottleneck in matrix size.</li>
+<li>Tri-directional tri-polynomial interpolation, this has no bottleneck in degree but at very high degree, as a recursive function, can be slow</li>
+</ul>
+The speed that these algorithms work at is: Linear time?? Quadratic time?? How do I calculate that?
+ </p>
+
+<hr/>
+<h3>The problem</h3>
+<p>Interpolating sequences and data in 3d cubes eg electron density. Creating an f(x,y,z). Finding the partial derivatives.</p>
+<button type="button" class="collapsible">A simple example</button>
+<div class="content">
+<p>
+</p>
+</div>
+<button type="button" class="collapsible">Verifying the "invariant method" with another simple example</button>
+<div class="content">
+<p>
+</p>
+</div>
+<hr/>
+<h3>Theorem 1: There is an invariant solution for a polynomial fitting a given degree and dimension</h3>
+<button type="button" class="collapsible">Statement of the case</button>
+<div class="content">
+  <p>
+</p>
+</div>
+<button type="button" class="collapsible">Definitions</button>
+<div class="content">
+  <p>
+</p>
+</div>
+<h4>Conclusion: The constant matrices can be precalculated making a time efficient solution to interpolation.</h4>
+<hr/>
+<h3>Partial differentiation</h3>
+<p>The coefficients matrix can be differentiated by a simple matrix manipulation</p>
+<button type="button" class="collapsible">Differentiation by moving matrix indices</button>
+<div class="content">
+  <p>
+  </p>
+</div>
+<button type="button" class="collapsible">An example</button>
+<div class="content">
+  <p>
+  </p>
+</div>
+<button type="button" class="collapsible">The code</button>
+<div class="content">
+  <p>   
+  </p>
+</div>
+<hr/>
+<h3>Theorem 2: Partial differentation of the multivariate function is equivalent to differentiation of a tri-polynomial solution</h3>
+<button type="button" class="collapsible">Statement of the case</button>
+<div class="content">
+  <p>
+</p>
+</div>
+<button type="button" class="collapsible">An example</button>
+<div class="content">
+  <p>
+</p>
+</div>
+<h4>Conclusion: The dimensional problem inherent in matrices can be solved by using a tri-directional polynomial fit.</h4>
+<hr/>
+
+
+
+<h3>Some of the invariant matrices</h3>
+<button type="button" class="collapsible">3d linear: 2x2x2</button>
+<div class="content">
+  <p>
+  </p>
+</div>
+<button type="button" class="collapsible">1d spline: 4x1x1</button>
+<div class="content">
+  <p>
+  </p>
+</div>
+<button type="button" class="collapsible">1d 5-degree 6x1x1</button>
+<div class="content">
+  <p>
+  </p>
+</div>
+<hr/>
+<h3>Code documentation</h3>
+<button type="button" class="collapsible">Class library</button>
+<div class="content">
+  <p>
+  <li><a href="https://github.com/RachelAlcraft/PsuMultivarse/blob/master/PsuMultivarse/MatrixInvariant.py">MatrixInvariant.py</a> This calculates the invariant matrix only once per session by a singleton pattern</li>
+  <li><a href="https://github.com/RachelAlcraft/PsuMultivarse/blob/master/PsuMultivarse/MultiSolver.py">MultiSolver.py</a> This uses the matrix solution, creating a multivariate function</li>
+  <li><a href="https://github.com/RachelAlcraft/PsuMultivarse/blob/master/PsuMultivarse/PolySolver.py">PolySolver.py</a> This uses a recursive 1 dimensional solution to calculate 3 polynomials for each point.</li>  
+</ul>
+  </p>
+</div>
+<hr/>
+<h3>References</h3>
+<ul>
+<li/>https://www-users.math.umn.edu/~olver/n_/mv.pdf
+<li/>https://www.math.auckland.ac.nz/~waldron/Multivariate/multivariate.html
+<li/>https://www.researchgate.net/publication/2886164_On_Multivariate_Interpolation
+<li/>History: https://www.sciencedirect.com/science/article/pii/S0377042700003538
+</ul>
+<hr/>
+<p style="background-color:tomato;">Contact Rachel by 
+<a href="mailto:rachelalcraft@gmail.com"> email.</a>
+- Return to Rachel's
+<a href='https://rachelalcraft.github.io' title='rachelalcraft.github.io' target='_self'>home page</a> - 
+Notes on citations <a href="citing.html">here</a></br>
+</p>
+<hr/>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
