@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head><link rel="icon" href="Images/atom.png"><title>Rachel Alcraft PsuGeometry</title>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {text-align:left;
+	background-color:LightSteelBlue;
+	padding: 9px;
+	} 
+pre {text-align:left;
+		background-color:AliceBlue;
+		padding: 9px;
+		color:Navy} 
+	img {width:98% }
+	table {width:98%;
+	table-layout:fixed;	
+	margin:0 auto;
+	background-color:Snow;	
+	display: table;} 
+td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
+.collapsible {
+  background-color: cornflowerblue;
+  color: AliceBlue;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: DeepSkyBlue;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HBH4HKT0NM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HBH4HKT0NM');
+</script>
+</head>
+<body>
+
+<body><h1>--- Rachel Alcraft, Bioinformatics ---</h1>
+<p style="background-color:tomato;">
+   <a href='index.html' title='Home' target='_self'>Home</a>
+~ <a href='citing.html' title='Citing' target='_self'>Citing</a>
+~ <a href='psubirkbeck.html' title='PsuBirkbeck' target='_self'>PsuBirkbeck</a>
+~ <a href='psugeometry.html' title='PsuGeometry' target='_self'>PsuGeometry</a>
+~ <a href='psudensity.html' title='PsuDensity' target='_self'>PsuDensity</a>
+~ <a href='densityflight.html' title='DensityFlight' target='_self'>DensityFlight</a>
+~ <a href='psumultivarse.html' title='PsuMultivarse' target='_self'>PsuMultivarse</a>
+</p>
+
+<hr/>
+<h1>Tau and density (private link)</h1>
+<hr/>
+<h3>Description</h3>
+<p>Data for the investigation of tau geometry and the electron density</p>
+<hr/>
+<h3>Improved tau</h3>
+<button type="button" class="collapsible">Electron density and radiant</button>
+<div class="content">
+<p>5 sets of pdbs in different categories</p>
+<ul>
+<li><a href="PsuGeometry/PaperTau/Set1_ccp4_slices.html">Extreme tau values around PSI=0</a><br/></li>
+<li><a href="PsuGeometry/PaperTau/Set2_ccp4_slices.html">Long N:N+1 with +ve PSI near 180</a><br/></li>
+<li><a href="PsuGeometry/PaperTau/Set3_ccp4_slices.html">Long N:N+1 with -ve PSI near 180</a><br/></li>
+<li><a href="PsuGeometry/PaperTau/Set4_ccp4_slices.html">Short N:N+1 with PSI near <0</a><br/></li>
+<li><a href="PsuGeometry/PaperTau/Set4_ccp4_slices.html">Short N:N+1 with PSI near >10</a><br/></li>
+</ul>
+</div>
+
+<hr/>
+
+<p style="background-color:tomato;">Contact Rachel by 
+<a href="mailto:rachelalcraft@gmail.com"> email.</a>
+- Return to Rachel's
+<a href='https://rachelalcraft.github.io' title='rachelalcraft.github.io' target='_self'>home page</a> - 
+Notes on citations <a href="citing.html">here</a></br>
+</p>
+<hr/>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
