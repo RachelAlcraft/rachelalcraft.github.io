@@ -76,9 +76,12 @@ td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
 <p> From this only residues with no multiple occupants are accepted. A further restriction is put on the bfactor of a residue to be no more than 1.3x the average bfactor of the structure.</p>
 <p>There are 3,630 observations of glycine tau angles in this good data set. From these a further restriction on quality is added - every atom is analysed to verify it is at a density peak in the structure. Where this is not true, the residue is rejected. 760 GLY observations pass this electron density test and make it into the "best supported" set.
 </p>
-<p>The geoemetry is compared across "all" and "best supported" data sets. </p>
+<p>The geoemetry is compared across "all" and "best supported" data sets. A statstical comparison of the data is performed using Mann-Whitney U Test.</p>
+<li><a href="PaperTau/StatsCompareAll.html">Stats comparison: "All, restricted and best supported</a>  <b>-  Mann-Whitney U Test for each amino acid</b><br/></li>
 
-<p>Note - Categories based on psi/tau/N:N+1 are invented that attempt to split the values up into logical groups.</p>
+<hr/>
+<h3>Categorisation</h3>
+<p>Categories based on psi/tau/N:N+1 are invented that attempt to split the values up into logical groups.</p>
 
 <table>
 <tr>
@@ -96,6 +99,10 @@ td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
 <ul>
 <li><a href="PaperTau/Geometry_AllvBestSup.html">Geometry comparison: "All" vs "best supported"</a>  <b>-  This shows histgrams and scatter plots for tau, N:N+1, psi and phi</b><br/></li>
 </ul>
+
+<hr/>
+<h3>Electron density of the categories</h3>
+<p>Categories based on psi/tau/N:N+1 are invented that attempt to split the values up into logical groups.</p>
 <p>Taking a selection of residues at the most extreme tau ends in the best supported categories, the electron density is visualised for supporting evidence of the accuracy of the pdb tau calculation.
 The possible causes of variation on the tau angle can be inspected by the seperation into these categories.
 </p>
