@@ -87,14 +87,39 @@ td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
 <p>A dataset is obtained from ultrahigh-resolution xray crystallographic structures that will have sufficient experimental evidence to inspect and validate all tau variation against the electron density.</p>
 <p>The set is first created from pdbs <1A non-homologous at 90% with >40 residues.</p>
 <p> From this only residues with no multiple occupants are accepted. A further restriction is put on the bfactor of a residue to be no more than 1.3x the average bfactor of the structure.</p>
-<p>There are 3,630 observations of glycine tau angles in this good data set. From these a further restriction on quality is added - every atom is analysed to verify it is at a density peak in the structure. Where this is not true, the residue is rejected. 760 GLY observations pass this electron density test and make it into the "best supported" set.
+<p>Further restrictions are then made to create 5 candidate sets. Eact atom point from the pdb is checked to see if it is a maximum. 
+<br/>It must first pass the hessian eigenvalue maximumm test of 3 -ve eigenvalues.
+<br/>Then a cube is built around it and every vertex checked. If any are greater then it fails the maximum test.
+<br/>The grid points are fractions of a crs cube at 0.2, 0.25, 0.3, 0.4 and 0.5 (no data found at 0.1).
+<br/>
+<br/>A statistical comparison is done of all the sets - all the sets have very similar means and sds though differing counts:
+<br/>(NCACO_B02 means atoms of the type N, CA,C or O are guaranteed to be a maximum within 0.2 of a grid point)
+<li>Set NCACO_B02 has 3,796 residues</li>
+<li>Set NCACO_B025 has 16,388 residues</li>
+<li>Set NCACO_B03 has 30,870 residues</li>
+<li>Set NCACO_B04 has 47,797 residues</li>
+<li>Set NCACO_B05 has 54,241 residues</li>
 </p>
-<hr/>
-<h3>Statistical comparisons for amino acids and geoemtric measures</h3>
 <p>Means and sd of E&H compared against my data. 
-My datasets are named, e.g. NCACO_B02 which means atoms of the type N, CA,C or O are guaranteed to be a maximum within 0.2 of a grid point. The wider this gets the more permissable. No data is foind at 0.1 of a grid point, a large and good dataset is found at 0.5</p>
 <li><a href="PaperTau/Compare_EH_Sets.html">Defensible means and sd - E&H vs this paper</a><br/></li>
+</p>
 
+<p>The residues that fail are compared with the outliers - the most extreme residues that pass. 
+<br/>Radiant pictures are obtained for all extremes - the rejected are per pdb structure, the outliers are per set.
+<br/>The outliers can be seen in the set histograms;
+<li><a href="PaperTau/Defensible_EH_AA_NCACO_B02.html">Set at 0.2 gridpoint histograms of E&H values</a><br/></li>
+<li><a href="PaperTau/Defensible_EH_AA_NCACO_B05.html">Set at 0.5 gridpoint histograms of E&H values</a><br/></li>
+
+<br/>The radiant pictures below, for planes of N-CA-C and CA-C-O (to cover all atoms in the histograms):
+<li><a href="PaperTau/GoodOutliers_NCACO_B02_NCAC_NCACO_B02.html">Good outliers - N:CA:C plane for 0.2 set</a><br/></li>
+<li><a href="PaperTau/GoodOutliers_NCACO_B02_CACO_NCACO_B02.html">Good outliers - CA:C:O plane for 0.2 set</a><br/></li>
+<li><a href="PaperTau/GoodOutliers_NCACO_B05_NCAC_NCACO_B05.html">Good outliers - N:CA:C plane for 0.5 set</a><br/></li>
+<li><a href="PaperTau/GoodOutliers_NCACO_B05_CACO_NCACO_B05.html">Good outliers - CA:C:O plane for 0.5 set</a><br/></li>
+<li><a href="PaperTau/Bad_1p1x_NCACO_B05_Bad_1p1x_NCACO_B05.html">Rejected residues of 1p1x by the 0.5 set</a><br/></li>
+</p>
+
+<hr/>
+<h3>PREVIOUS DATA Statistical comparisons for amino acids and geoemetric measures</h3>
 <p>For each geoemtric measure currently calculated (no limit, but these are what I have to hand) each amino acid is analysed seperately between the best supported and restricted and unrestricted sets.</p>
 <p>Histogram report showing Engh and Huber values 1991 and 2001 against best supported values</p>
 <li><a href="PaperTau/Defensible_EH.html">Defensible atoms versus Engh and Huber (GLY, PRO and other)</a><br/></li>
