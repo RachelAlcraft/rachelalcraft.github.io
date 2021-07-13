@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head><link rel="icon" href="Images/atom.png"><title>Rachel Alcraft PsuGeometry</title>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {text-align:left;
+	background-color:LightSteelBlue;
+	padding: 9px;
+	} 
+pre {text-align:left;
+		background-color:AliceBlue;
+		padding: 9px;
+		color:Navy} 
+	img {width:98% }
+	table {width:98%;
+	table-layout:fixed;	
+	margin:0 auto;
+	background-color:Snow;	
+	display: table;} 
+td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
+.collapsible {
+  background-color: cornflowerblue;
+  color: AliceBlue;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: DeepSkyBlue;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HBH4HKT0NM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HBH4HKT0NM');
+</script>
+</head>
+<body>
+
+<body><h1>--- Rachel Alcraft, Bioinformatics ---</h1>
+<p style="background-color:tomato;">
+   <a href='index.html' title='Home' target='_self'>Home</a>
+~ <a href='citing.html' title='Citing' target='_self'>Citing</a>
+~ <a href='psubirkbeck.html' title='PsuBirkbeck' target='_self'>PsuBirkbeck</a>
+~ <a href='psugeometry.html' title='PsuGeometry' target='_self'>PsuGeometry</a>
+~ <a href='psudensity.html' title='PsuDensity' target='_self'>PsuDensity</a>
+~ <a href='densityflight.html' title='DensityFlight' target='_self'>DensityFlight</a>
+~ <a href='psumultivarse.html' title='PsuMultivarse' target='_self'>PsuMultivarse</a>
+</p>
+
+<hr/>
+<h1>Some data for 2021 summary</h1>
+<hr/>
+<h3>Backbone bonds</h3>
+<p>
+<a href="Fo_Adj_bonds.html">Backbone bonds for 4 sets</a><br/>
+</p>
+<h3>Backbone angles per aa inc cis</h3>
+<p>
+<a href="Fo_Adj_tau.html">Tau for 4 sets</a><br/>
+<a href="Fo_Adj_pretau.html">C-1:N:CA for 4 sets</a><br/>
+<a href="Fo_Adj_plustau.html">CA:C:N+1 for 4 sets</a><br/>
+<a href="Fo_Adj_caco.html">CA:C:O for 4 sets</a><br/>
+<a href="Fo_Adj_cacn1.html">CA:C:N+1 for 4 sets</a><br/>
+<a href="Fo_Adj_ocn1.html">O:C:N+1 for 4 sets</a><br/>
+</p>
+<h3>Omegas</h3>
+<p>
+<a href="Fo_Adj_omegaA.html">Omega less than -90 </a><br/>
+<a href="Fo_Adj_omegaB.html">Omega more than 90 </a><br/>
+<a href="Fo_Adj_omegaC.html">Omega near 0 </a><br/>
+</p>
+<h3>Averages</h3>
+<p>
+<a href="ScatterAverage1_Compare.html">Scatters of average bond lengths per pdb</a><br/>
+<a href="Fo_Adj_bondsMean.html">Histograms of backbone bond lengths</a><br/>
+
+</p>
+<hr/>
+
+
+<p style="background-color:tomato;">Contact Rachel by 
+<a href="mailto:rachelalcraft@gmail.com"> email.</a>
+- Return to Rachel's
+<a href='https://rachelalcraft.github.io' title='rachelalcraft.github.io' target='_self'>home page</a> - 
+Notes on citations <a href="citing.html">here</a></br>
+</p>
+<hr/>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
