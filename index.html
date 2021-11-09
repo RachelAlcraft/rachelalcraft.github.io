@@ -1,11 +1,45 @@
 <!DOCTYPE html><html lang="en"><head>
 <link rel="icon" href="Images/atom.png">
 <title>Rachel Alcraft Home</title>
-<style> 
-body {text-align:left;background-color:LightSteelBlue ;} 
-img {width:95% }
-table {font-size:0.8vw;width:95%;table-layout:fixed;display:table;margin:0 auto;background-color:LightSteelBlue ;} 
-td {border:1px solid MistyRose;background-color:AliceBlue;}
+<style>
+body {text-align:left;
+	background-color:LightSteelBlue;
+	padding: 9px;
+	} 
+pre {text-align:left;
+		background-color:AliceBlue;
+		padding: 9px;
+		color:Navy} 
+	img {width:98% }
+	table {width:98%;
+	table-layout:fixed;	
+	margin:0 auto;
+	background-color:Snow;	
+	display: table;} 
+td {border:1px solid Snow;background-color:White;word-wrap:break-word;}
+.collapsible {
+  background-color: SkyBlue;
+  color: Black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: PowderBlue;
+  color: royalblue;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBH4HKT0NM"></script>
@@ -20,48 +54,47 @@ td {border:1px solid MistyRose;background-color:AliceBlue;}
 
 
 
-<body><h1>--- Rachel Alcraft, Bioinformatics ---</h1>
-<p style="background-color:tomato;">
+<body>
+<p style="background-color:LightSlateGray;padding:10px">
    <a href='index.html' title='Home' target='_self'>Home</a>
 ~ <a href='citing.html' title='Citing' target='_self'>Citing</a>
-~ <a href='psubirkbeck.html' title='PsuBirkbeck' target='_self'>PsuBirkbeck</a>
-~ <a href='psugeometry.html' title='PsuGeometry' target='_self'>PsuGeometry</a>
-~ <a href='psudensity.html' title='PsuDensity' target='_self'>PsuDensity</a>
+~ <a href='leucippy.html' title='PsuBirkbeck' target='_self'>LeucipPy</a>
+~ <a href='leucipplus.html' title='PsuBirkbeck' target='_self'>LeucipPlus</a>
 ~ <a href='densityflight.html' title='DensityFlight' target='_self'>DensityFlight</a>
-~ <a href='psumultivarse.html' title='PsuMultivarse' target='_self'>PsuMultivarse</a>
 </p>
 
-<h1>Bioinformatics Code</h1>
-<p>These projects have been developed as a result of studying Bioinformatics at Birkbeck College, UK</p>
 <hr/>
-<h2>Protein Structure Utility - Birkbeck MSc</h2>
-<p>This website and database was developed as part of an MSc thesis in Bioinformatics and Systems Biology (2020), supervisor <a href="http://people.cryst.bbk.ac.uk/~ubcg66a/">Mark Williams</a><br/>
-The database contains 3434 high resolution structures with resolution <= 1.3Å and 2697 structures from 2019 > 1.3Å<br/>
-The website allows production of geometric plots and statistical analyses using these structures and selected criteria. <br/></br>
-PSU Birkbeck help and documentation is <a href="psubirkbeck.html">here</a></br><br/>
-The Website hosted on the Birkbeck College servers is <a href="https://student.cryst.bbk.ac.uk/~ab002/thesis.html">here</a></br></br>
-A highlight is the demonstration of the <a href="PsuBirkbeck/examples/bimodaltau.html">bimodal nature of tau.</a></br>
+<div  style="background-color:HotPink;padding:2px">
+<h1>Bioinformatics Projects : Rachel Alcraft</h1>
+</div>
+<hr/>
+
+<p>These projects have been developed as a result of studying Bioinformatics at Birkbeck College, University of London, UK
+<br/>The current projects are under active resaerch as part of my PhD project.</p>
+<hr/>
+
+<h2>Leucippus (2021 +): A webserver exploring protein structure and electron density</h2>
+<p>
+Leucippus is the integrated environment of LeucipPlus and LeucipPy operating as a webserver on the university servers. 
+<br/>Currently in its very early stages it allows the browsing of electron density values and peaks of x-ray solved structures.
+<br/>It also provides adjusted pdb files based on electron density maxima (active research).
+<p>Click here for <a href="https://student.cryst.bbk.ac.uk/~ab002/Leucippus.html">Leucipus webserver</a>  for protein structure exploration</p>
 </p>
 <hr/>
-<h2>PsuGeometry</h2>
+
+<h2>LeucipPlus (2021 +): A C++ utility for protein structure analysis and re-refinement</h2>
+<p>
+A c++ utility to analyse protein structures, including re-refinement and electron density and structure factor analysis.
+<br/>This is in under active research and is part of my PhD project.
+</p>
+<hr/>
+<h2>LeucipPy (2020 +): A python library for protein geometry correlations</h2>
 <p>This is a python library to produce geoemntric analyses of protein structures, including the 
 secondary structure information from dssp and the electron density information from ccp4 files where available.
 The images produced range from a simple Ramachandran plot than can be coloured on for example secondary structure, 
 electron density or B-Factor, to say, a correlation of number of electrons against B-Factor.
-The library contains some pre-defined reports so the code to create some fairly involved reports is minimal.<br/><br/>
-PsuGeometry help and documentation is <a href="psugeometry.html">here</a></br>
+The library contains some pre-defined reports so the code to create some fairly involved reports is minimal.
 </p>
-<p>Some examples produced by the library are below:
-<ul>
-<li><a href="PsuGeometry/examples/PSU-1tt8_rae-GEO.html">Correlation reports</a></li>
-<li><a href="PsuGeometry/examples/PSU-5nqo_close-GEO.html">Contact Maps</a></li>
-<li><a href="PsuGeometry/examples/PSU-1000-GEO.html">1000 Structures</a></li>
-<li><a href="PsuGeometry/examples/PSU-tau-GEO.html">Bimodal Tau example for each amino acid</a></li>
-<li><a href="PsuGeometry/examples/PSU-2cnq_bad-GEO.html">Correlation reports show structure with suspicious geoemtry</a></li>
-<li><a href="PsuGeometry/examples/PSU-2cnq_procheck1-GEO.html">Above structure with reports that match ProCheck</a></li>
-<li><a href="PsuGeometry/examples/PSU-1ejg_denpt_1ejg-GEO.html">Looking at the electron density against geoemtry and coordinates part 1</a></li>
-<li><a href="PsuGeometry/examples/PSU-5nqo_data_5nqo-GEO.html">Looking at the electron density against geoemtry and coordinates part 2</a></li>
-</ul>
 <p>
 The library relies on these Bioinformatics librararies:
 <ul>
@@ -70,19 +103,9 @@ The library relies on these Bioinformatics librararies:
 <li><a href="https://ssbio.readthedocs.io/en/latest/instructions/dssp.html">DSSP</a> for asigning secondary structure</li>
 </ul>
 </p>
-</p>
+
 <hr/>
-<h2>PsuDensity</h2>
-<p>This is a python library to analyse the electron density of protein structures directly, including the 
-ability to calculate the second derivative of the electron density.
-The images are produced as planar slices based on 3 given xyz coordinates for a central atom, a linear atom and a planar atom.
-The PsuGeometry library is used to create html reports in a consistent format, enabling slices at different sizes and granularity, 
-different interpolation methods, derivations as far as the degree of the interpolation, and any combination of Fo and Fc 
-(based on an assumption of the underlying matrices as 2Fo-Fc and Fo-Fc).<br/><br/>
-PsuDensity help and documentation is <a href="psudensity.html">here</a></br>
-</p>
-<hr/>
-<h2>Density Flight</h2>
+<h2>Density Flight (2020 + ): An interactive C# windows app to explore electron density maps </h2>
 <p>
 Density Flight is a windows application to view the inside of an electron density matrix. The application 
 allows you to navigate around like a flight simulator, viewing atoms, bonds between atoms, 
@@ -92,11 +115,27 @@ It will be available for beta testing shortly on request.<br/><br/>
 Density Flight help and documentation is <a href="densityflight.html">here</a></br>
 </p>
 
-<hr/><p style="background-color:tomato;">Contact Rachel by 
-<a href="mailto:rachelalcraft@gmail.com"> email.</a>
-- Return to Rachel's
-<a href='https://rachelalcraft.github.io' title='rachelalcraft.github.io' target='_self'>home page</a> - 
-Notes on citations <a href="citing.html">here</a></br>
+<hr/>
+
+
+<h2>Protein Structure Utility - Birkbeck MSc (2019-2020)</h2>
+<p>This website and database was developed as part of an MSc thesis in Bioinformatics and Systems Biology (2020), supervisor <a href="http://people.cryst.bbk.ac.uk/~ubcg66a/">Mark Williams</a><br/>
+The database contains 3434 high resolution structures with resolution <= 1.3Å and 2697 structures from 2019 > 1.3Å<br/>
+The website allows production of geometric plots and statistical analyses using these structures and selected criteria. <br/></br>
+PSU Birkbeck help and documentation is <a href="psubirkbeck.html">here</a></br><br/>
+The Website hosted on the Birkbeck College servers is <a href="https://student.cryst.bbk.ac.uk/~ab002/thesis.html">here</a></br></br>
+A highlight is the demonstration of the <a href="PsuBirkbeck/examples/bimodaltau.html">bimodal nature of tau.</a></br>
 </p>
+<hr/>
+
+
+
+<p style="background-color:LightSlateGray;padding:10px">
+Created by: <a href = "mailto:ralcra01@student.bbk.ac.uk" > Rachel Alcraft </a >
+ ~ Home page: <a href="https://student.cryst.bbk.ac.uk/~ab002/Leucippus.html" title="Leucippus" target="_self">Leucippus</a>
+ ~ Supervisor: <a href="http://people.cryst.bbk.ac.uk/~ubcg66a/" title="MAW" target="_blank">Mark A. Williams</a>
+ ~ Birkbeck, University of London (2021)
+</p>
+
 <hr/>
 </body>
